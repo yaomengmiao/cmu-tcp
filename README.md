@@ -35,10 +35,6 @@ The following files have been provided for you:
 * `test_cp1.py`: Test script for CP1 that is executed with `make test`. You should add your own tests to this file.
 
 * `test_cp2.py`: Test script for CP2 that can be executed with `make test`. You should add your own tests to this file.
-
-* `score_calculator.py`: Score calculator for your custom congestion control algorithm in CP3. See the comments in the file and `cp3_instructions.txt` for more details on its usage.
-
-* `cp3_instructions.txt`: Some further instructions on running `score_calculator.py` for CP3.
     
 * `grading.h`: These are variables that we will use to test your implementation. We will be replacing this file when running tests, and hence you should test your implementation with different values. 
 
@@ -63,3 +59,12 @@ The following files have been provided for you:
     * Advertised Window		    [2 bytes]
     * Extension length		    [2 bytes]
     * Extension Data		    [You Decide]
+
+## Troubleshooting
+If you get the following error while running `vagrant up` during the "Mounting shared folders..." phase that looks like the one below:
+
+```
+Vagrant was unable to mount VirtualBox shared folders. This is usually because the filesystem "vboxsf" is not available. This filesystem is made available via the VirtualBox Guest Additions and kernel module. Please verify that these guest additions are properly installed in the guest. This is not a bug in Vagrant and is usually caused by a faulty Vagrant box.
+```
+
+Run `vagrant plugin install vagrant-vbguest` - see [@981](https://piazza.com/class/kq8ahgin2v126f?cid=281) on Piazza
